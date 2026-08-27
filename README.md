@@ -4,14 +4,18 @@ Blindfold chess against [Maia](https://maiachess.com/) (human-like engine levels
 
 ## Demo
 
-Screenshots / a GIF of new game → play → verification question → replay will land here after the English UI pass. Until then: start a game, type SAN moves, answer the checks, open a finished game from the list to replay.
+New game → SAN move → visualisation question → replay of a finished game:
+
+![New game, a move, and a verification question](docs/play.gif)
+
+![Replay with the board, questions, and moves](docs/replay.gif)
 
 ## Architecture
 
 ```
 Next.js PWA  ──HTTPS──►  FastAPI + python-chess + lc0/Maia
-(Vercel, or        Bearer token injected by a server-side
- optional Docker)      proxy (never sent to the browser)
+(your machine or        Bearer token injected by a server-side
+ a container)              proxy (never sent to the browser)
                               │
                               ├── SQLite (games)
                               └── Maia .pb.gz weights
@@ -35,7 +39,7 @@ curl -s http://localhost:8000/health   # {"ok":true}
 
 The first build compiles [lc0](https://github.com/LeelaChessZero/lc0) with the Eigen CPU backend (works on x86_64 and ARM64). That takes a while; later starts reuse the image. Maia weights download on first run into `./weights/` and are not rebuilt into the image.
 
-Play UI in another terminal (recommended: Next locally, or Vercel):
+Then run the PWA locally:
 
 ```bash
 cd frontend
@@ -53,7 +57,7 @@ Uncomment the `caddy` service in `docker-compose.yml` and set `BACKEND=backend:8
 
 ### Optional: frontend container
 
-Vercel is the default host for the PWA (free, no lc0). If you cannot use Vercel:
+Compose only starts the game service. If you would rather containerise the PWA too:
 
 ```bash
 docker build -t alaciega-web frontend/
@@ -109,7 +113,7 @@ Use this on a VPS where you would rather compile lc0 yourself (typical on ARM64)
 
 5. **Caddy** reverse proxy: use the repo `Caddyfile`, set `DOMAIN` to your host, keep `BACKEND` at `localhost:8000`.
 
-6. **Frontend:** deploy `frontend/` to Vercel with `API_URL` (backend origin) and `API_TOKEN` as **server** env vars, not `NEXT_PUBLIC_*`.
+6. **Frontend:** `cd frontend && npm install && npm run build && npm run start`, with `API_URL` (backend origin) and `API_TOKEN` as **server** env vars, not `NEXT_PUBLIC_*`. Same vars if you deploy the `frontend/` app to any Node host.
 
 ## Environment variables
 
@@ -149,21 +153,3 @@ Do not put the token in `NEXT_PUBLIC_*`. `GET /health` is public; every other AP
 ## License
 
 [MIT](LICENSE)
-
-## Publishing a clean history
-
-Old commits may still contain machine paths. The public repo should be **one** commit. When you are ready (this replaces `origin/main`):
-
-```bash
-# .env must stay untracked
-git status
-rm -rf .git
-git init
-git add .
-git commit -m "Initial public release"
-git remote add origin https://github.com/Pedrojonfg/alaciega.git
-git branch -M main
-git push -u origin main --force
-```
-
-`--force` drops the remote history. Skip it if anyone else has a clone of the old commits; push to a new empty GitHub repo instead. Put the rotated `API_TOKEN` from your local `.env` on the VPS as well.
