@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "alaciega",
+    "description": "Blindfold chess against Maia"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español"
+  },
+  "common": {
+    "home": "Home",
+    "connectError": "Could not connect to the server.",
+    "games": "Games",
+    "newGame": "New game"
+  },
+  "newGame": {
+    "kicker": "Correspondence · no board",
+    "lede": "Pick a colour and level. Maia replies; you visualise.",
+    "colorLabel": "Colour",
+    "white": "White",
+    "black": "Black",
+    "levelLabel": "Maia level",
+    "questionsPerBatch": "Questions per round",
+    "movesInterval": "Moves between rounds",
+    "emptyLevels": "No levels available.",
+    "levelsLoadError": "Could not load Maia levels.",
+    "createError": "Could not create the game.",
+    "startButton": "Start game",
+    "starting": "Starting…",
+    "maiaThinking": "Maia is thinking…"
+  },
+  "play": {
+    "title": "Game",
+    "noMoves": "No moves yet.",
+    "correct": "Correct.",
+    "incorrect": "Wrong.",
+    "questionProgress": "Question {current} of {total}",
+    "continue": "Continue",
+    "yes": "Yes",
+    "no": "No",
+    "answerLabel": "Answer",
+    "answerButton": "Answer",
+    "moveLabel": "Move (SAN)",
+    "movePlaceholder": "Nf3, exd5, O-O",
+    "playButton": "Play",
+    "playing": "Playing…",
+    "moveError": "Could not send the move.",
+    "peekError": "Could not show the board.",
+    "resignError": "Could not resign.",
+    "closePeek": "Close now",
+    "finished": "Game over",
+    "viewBoard": "View board",
+    "peekBoard": "Show board ({count})",
+    "resign": "Resign",
+    "suggestPeek": "We suggest looking at the board.",
+    "notFound": "game not found"
+  },
+  "gamesList": {
+    "title": "Games",
+    "loadError": "Could not load games.",
+    "deleteError": "Could not delete the game.",
+    "downloadError": "Could not download the PGN.",
+    "empty": "No games yet.",
+    "deleteConfirm": "Delete this game? This cannot be undone.",
+    "delete": "Delete",
+    "white": "White",
+    "black": "Black",
+    "ongoing": "in progress",
+    "downloadPgn": "Download PGN"
+  },
+  "replay": {
+    "title": "Replay",
+    "newShort": "New",
+    "questionsTitle": "Questions and answers",
+    "noQuestion": "No question on this move",
+    "peekUsed": "Board peek was used.",
+    "answer": "Answer: {value}",
+    "expectedAnswer": "Expected answer: {value}",
+    "movesTitle": "Game moves",
+    "questionsTab": "Questions",
+    "movesTab": "Moves",
+    "ongoing": "This game is still in progress. The board is revealed when it ends.",
+    "continue": "Resume game",
+    "prev": "Previous",
+    "next": "Next",
+    "downloadPgn": "Download PGN",
+    "openError": "Could not open the game.",
+    "notFound": "game not found",
+    "questionsAria": "Questions and answers",
+    "movesAria": "Game moves"
+  }
+}

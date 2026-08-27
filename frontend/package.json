@@ -1,0 +1,25 @@
+{
+  "name": "alaciega-web",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --experimental-strip-types --test lib/*.test.ts"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "next": "^15.5.0",
+    "next-intl": "^4.13.7",
+    "react": "^19.1.0",
+    "react-chessboard": "^5.12.1",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.0"
+  }
+}

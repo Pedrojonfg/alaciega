@@ -1,0 +1,33 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file: .env
+    environment:
+      LC0_PATH: /usr/local/bin/lc0
+      MAIA_WEIGHTS_DIR: /app/weights
+      DATABASE_PATH: /app/data/alaciega.db
+    volumes:
+      - ./data:/app/data
+      - ./weights:/app/weights
+    ports:
+      - "8000:8000"
+
+  # Optional TLS terminator for a public VPS. Local play does not need it.
+  # Set BACKEND=backend:8000 when using this service.
+  # caddy:
+  #   image: caddy:2
+  #   environment:
+  #     BACKEND: backend:8000
+  #   volumes:
+  #     - ./Caddyfile:/etc/caddy/Caddyfile
+  #     - caddy_data:/data
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   depends_on:
+  #     - backend
+
+# volumes:
+#   caddy_data:

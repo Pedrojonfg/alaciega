@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "alaciega",
+    "description": "Ajedrez sin ver el tablero contra Maia"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español"
+  },
+  "common": {
+    "home": "Inicio",
+    "connectError": "No se pudo conectar con el servidor.",
+    "games": "Partidas",
+    "newGame": "Nueva partida"
+  },
+  "newGame": {
+    "kicker": "Correspondencia · sin tablero",
+    "lede": "Elige color y nivel. Maia responde; tú visualizas.",
+    "colorLabel": "Color",
+    "white": "Blancas",
+    "black": "Negras",
+    "levelLabel": "Nivel de Maia",
+    "questionsPerBatch": "Preguntas por tanda",
+    "movesInterval": "Jugadas entre tandas",
+    "emptyLevels": "No hay niveles disponibles.",
+    "levelsLoadError": "No se pudieron cargar los niveles de Maia.",
+    "createError": "No se pudo crear la partida.",
+    "startButton": "Empezar partida",
+    "starting": "Empezando…",
+    "maiaThinking": "Maia está pensando…"
+  },
+  "play": {
+    "title": "Partida",
+    "noMoves": "Aún no hay jugadas.",
+    "correct": "Acierto.",
+    "incorrect": "Fallo.",
+    "questionProgress": "Pregunta {current} de {total}",
+    "continue": "Continuar",
+    "yes": "Sí",
+    "no": "No",
+    "answerLabel": "Respuesta",
+    "answerButton": "Responder",
+    "moveLabel": "Jugada (SAN)",
+    "movePlaceholder": "Nf3, exd5, O-O",
+    "playButton": "Jugar",
+    "playing": "Jugando…",
+    "moveError": "No se pudo enviar la jugada.",
+    "peekError": "No se pudo ver el tablero.",
+    "resignError": "No se pudo rendir.",
+    "closePeek": "Cerrar ya",
+    "finished": "Partida terminada",
+    "viewBoard": "Ver tablero",
+    "peekBoard": "Ver tablero ({count})",
+    "resign": "Rendirse",
+    "suggestPeek": "Te sugerimos mirar el tablero.",
+    "notFound": "partida no encontrada"
+  },
+  "gamesList": {
+    "title": "Partidas",
+    "loadError": "No se pudieron cargar las partidas.",
+    "deleteError": "No se pudo borrar la partida.",
+    "downloadError": "No se pudo descargar el PGN.",
+    "empty": "Aún no hay partidas.",
+    "deleteConfirm": "¿Borrar esta partida? No se puede deshacer.",
+    "delete": "Borrar",
+    "white": "Blancas",
+    "black": "Negras",
+    "ongoing": "en curso",
+    "downloadPgn": "Descargar PGN"
+  },
+  "replay": {
+    "title": "Replay",
+    "newShort": "Nueva",
+    "questionsTitle": "Preguntas y respuestas",
+    "noQuestion": "Sin pregunta en esta jugada",
+    "peekUsed": "Se usó ver tablero.",
+    "answer": "Respuesta: {value}",
+    "expectedAnswer": "Respuesta esperada: {value}",
+    "movesTitle": "Jugadas de la partida",
+    "questionsTab": "Preguntas",
+    "movesTab": "Jugadas",
+    "ongoing": "Esta partida sigue en curso. El tablero se revela al terminar.",
+    "continue": "Continuar partida",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "downloadPgn": "Descargar PGN",
+    "openError": "No se pudo abrir la partida.",
+    "notFound": "partida no encontrada",
+    "questionsAria": "Preguntas y respuestas",
+    "movesAria": "Jugadas de la partida"
+  }
+}
