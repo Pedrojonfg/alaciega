@@ -1,4 +1,4 @@
-import { englishPrompt, englishShort } from "./question-i18n.ts";
+import { englishPrompt, englishShort } from "./question-i18n";
 
 export type AnswerShape = "number" | "boolean" | "square" | "square_list" | "piece_symbol";
 
